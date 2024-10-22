@@ -8,9 +8,9 @@ int main(void)
 int i;
 
     /* For loop to print the alphabet from A to Z */
-for (i = 100; i <= 122; i++)
+for (i = 97; i <= 122; i++)
 {
-putchar(i + '0'); /*The zero coverts digit to ASCII equivalent*/
+putchar(i); /*The zero coverts digit to ASCII equivalent*/
 putchar('\n');
 }
 return (0);

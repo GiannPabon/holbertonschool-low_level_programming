@@ -11,8 +11,6 @@ int i;
 for (i = 97; i <= 122; i++)
 {
 putchar(i); /*The zero coverts digit to ASCII equivalent*/
+}
 putchar('\n');
-}
 return (0);
-}
-

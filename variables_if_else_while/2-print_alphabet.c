@@ -14,3 +14,4 @@ putchar(i); /*The zero coverts digit to ASCII equivalent*/
 }
 putchar('\n');
 return (0);
+}

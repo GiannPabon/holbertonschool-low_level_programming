@@ -9,9 +9,9 @@ int number;
 
 	for (number = 0; number <= 9; number++)
 {
-	putchar(number + '0');
+	printf("%d", number);
 }
-putchar('\n');
+printf("\n");
 
 return (0);
 }

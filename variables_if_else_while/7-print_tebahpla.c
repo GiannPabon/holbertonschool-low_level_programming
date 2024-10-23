@@ -8,7 +8,7 @@ int main(void)
 char letter;
 
     /* For loop to print the alphabet from A to Z */
-for (letter <= 122; letter > 97; letter--)
+for (letter = 122; letter >= 97; letter--)
 {
 putchar(letter); /*The zero coverts digit to ASCII equivalent*/
 }

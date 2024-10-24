@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _islower - Output 1 if char is c if not it will print 0
- * c - will hold an int
+ * @c: will hold an int
  * Return: 0 success
  *
  */

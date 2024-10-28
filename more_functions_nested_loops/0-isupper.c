@@ -1,8 +1,10 @@
 #include "main.h"
-/*
- *_isupper - main funtion
+/**
+ * _isupper - main funtion
  *
+ * @c:  main variable
  *
+ * Return: success
  */
 
 int _isupper(int c)

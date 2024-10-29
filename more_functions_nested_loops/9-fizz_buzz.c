@@ -25,7 +25,7 @@ void print_number(int n)
 }
 
 /**
- * main - prints numbers from 1 to 100 with Fizz, Buzz, and FizzBuzz substitutions
+ * main - prints numbers from 1 to 100 with Fizz, Buzz, and FizzBuzz
  *
  * Return: 0 (Success)
  */

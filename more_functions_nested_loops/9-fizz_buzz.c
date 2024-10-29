@@ -1,10 +1,18 @@
+#include <unistd.h>
 #include "main.h"
+
+int _putchar(char c)
+{
+	return write(1, &c, 1);
+}
+
 void print_number(int n)
 {
 	if (n >= 10)
 		print_number(n / 10);
 	_putchar((n % 10) + '0');
 }
+
 int main(void)
 {
 	int i;
@@ -45,3 +53,4 @@ int main(void)
 	_putchar('\n');
 	return (0);
 }
+

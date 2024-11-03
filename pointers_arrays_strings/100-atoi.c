@@ -1,40 +1,56 @@
 #include "main.h"
-
-
 /**
- * _atoi - converts a string to an integer
- * @s: input string
- *
- * Return: the integer value of the string, or 0 if no numbers are found
+ * _atoi - Convert a string to an integer
+ * @s: string to convert
+ * Return: return r if negative, return sum if positive.
  */
 int _atoi(char *s)
 {
-	int i = 0;
-	int sign = 1;
-	int result = 0;
-	int found_digit = 0;
+	int i, j, n, convert, mul, sum, r;
 
-	while (s[i] != '\0')
+	char *d, *a;
+
+	n = 0;
+	mul = 1;
+	convert = 0;
+	sum = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		/* Handle signs */
 		if (s[i] == '-')
-			sign *= -1;
-		else if (s[i] == '+')
-			sign *= 1;
-
-		/* Convert characters to integer if they are digits */
-		if (s[i] >= '0' && s[i] <= '9')
 		{
-			found_digit = 1;
-			result = result * 10 + (s[i] - '0');
+			n++;
 		}
-		else if (found_digit)
+		if (s[i] > 47 && s[i] < 58)
 		{
+			d = s + i;
 			break;
 		}
-		i++;
 	}
 
-	return (result * sign);
-}
+	for (j = 0; d[j] != '\0'; j++)
+	{
+		if (d[j] < 48 || d[j] > 57)
+		{
+			d[j] = '\0';
+			break;
+		}
+	}
+	a = d + (j - 1);
 
+	while (a != d - 1)
+	{
+		convert = *a - 48;
+		sum += convert * mul;
+		mul = mul * 10;
+		a--;
+	}
+
+	if (!n % 2 == 0)
+	{
+		r = sum * -1;
+		return (r);
+	}
+
+	return (sum);
+}

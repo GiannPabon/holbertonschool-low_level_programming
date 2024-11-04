@@ -15,7 +15,6 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
-		/* Capitalize the current character if capitalize_next is set and it's lowercase */
 		if (capitalize_next && (str[i] >= 'a' && str[i] <= 'z'))
 		{
 			str[i] -= 'a' - 'A';

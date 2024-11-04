@@ -15,13 +15,14 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
+		/* Capitalize the current character if capitalize_next is set and it's lowercase */
 		if (capitalize_next && (str[i] >= 'a' && str[i] <= 'z'))
 		{
 			str[i] -= 'a' - 'A';
-			capitalize_next = 0;
 		}
 
-		/* Check if the current character is a separator */
+		/* Reset capitalize_next and check if current character is a separator */
+		capitalize_next = 0;
 		for (j = 0; separators[j] != '\0'; j++)
 		{
 			if (str[i] == separators[j])
@@ -35,4 +36,3 @@ char *cap_string(char *str)
 
 	return (str);
 }
-

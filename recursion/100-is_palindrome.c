@@ -25,5 +25,8 @@ int check_palindrome(char *s, int start, int end)
  */
 int is_palindrome(char *s)
 {
-	if (*s == '\0')  /* Base case: empty string is a pal
+	if (*s == '\0')  /* Base case: empty string is a palindrome */
+		return 1;
+	return check_palindrome(s, 0, _strlen_recursion(s) - 1);
+}
 

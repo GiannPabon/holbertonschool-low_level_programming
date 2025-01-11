@@ -11,10 +11,10 @@
 int check_palindrome(char *s, int start, int end)
 {
 	if (start >= end)  /* If all characters have been checked */
-		return 1;
+		return (1);
 	if (s[start] != s[end])  /* If characters don't match */
-		return 0;
-	return check_palindrome(s, start + 1, end - 1);  /* Recurse with inner substring */
+		return (0);
+	return (check_palindrome(s, start + 1, end - 1));
 }
 
 /**
@@ -26,8 +26,8 @@ int check_palindrome(char *s, int start, int end)
 int is_palindrome(char *s)
 {
 	if (*s == '\0')  /* Base case: empty string is a palindrome */
-		return 1;
-	return check_palindrome(s, 0, _strlen_recursion(s) - 1);
+		return (1);
+	return (check_palindrome(s, 0, _strlen_recursion(s) - 1));
 }
 
 /**
@@ -39,7 +39,7 @@ int is_palindrome(char *s)
 int _strlen_recursion(char *s)
 {
 	if (*s == '\0')  /* Base case: end of string */
-		return 0;
-	return 1 + _strlen_recursion(s + 1);  /* Recursive case: move to the next character */
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
 }
 
